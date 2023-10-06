@@ -5,6 +5,7 @@
  * `quotes` array 
 ***/
 const displayedQuotes = [];
+
 // Example quote objects
 const quotes = [
     {
@@ -35,11 +36,9 @@ const quotes = [
       quote: "The best time to plant a tree was 20 years ago. The second best time is now.",
       source: "Chinese Proverb",
       citation: "unknow",
-      year: 2000}
+      year: 2000
+    }
   ];
-  
-  
-
 
 /***
  * `getRandomQuote` function
@@ -57,9 +56,6 @@ function getRandomQuote() {
   displayedQuotes.push(randomQuote);
   return randomQuote;
 }
-  
-  
-
 
 /***
  * `printQuote` function
@@ -80,14 +76,11 @@ function printQuote() {
     htmlString += '</p>';
   
     document.getElementById('quote-box').innerHTML = htmlString;
-  }
-  
-
+}
 
 /***
  * click event listener for the print quote button
  * The code will look like the following. You need to complete it.
-
 ***/
 
 //document.getElementById('load-quote').addEventListener...
