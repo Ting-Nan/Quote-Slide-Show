@@ -4,6 +4,7 @@
 /*** 
  * `quotes` array 
 ***/
+const displayedQuotes = [];
 // Example quote objects
 const quotes = [
     {
@@ -44,9 +45,19 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
+  if (displayedQuotes.length === quotes.length) {
+    displayedQuotes.length = 0;
   }
+
+  let randomQuote;
+  do {
+    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  } while (displayedQuotes.includes(randomQuote));
+
+  displayedQuotes.push(randomQuote);
+  return randomQuote;
+}
+  
   
 
 
